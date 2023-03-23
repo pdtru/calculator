@@ -49,6 +49,16 @@ body {
     border-radius: 8px;
 }
 
+.screen-prev {
+    color: rgba(149, 147, 136, 255);
+    font-size: 20px;
+}
+
+.screen-curr {
+    color: rgba(24, 24, 13, 255);
+    font-size: 32px;
+}
+
 .row {
     display: flex;
     flex-direction: row;
@@ -61,7 +71,7 @@ button {
     border-radius: 8px;
     border-style: none;
     color: #9a5833;
-    background-color: rgba(245,240,234,255);
+    background-color: rgba(245, 240, 234, 255);
 }
 
 .btn {
@@ -73,34 +83,34 @@ button {
 }
 
 .btn:hover {
-    background-color: rgba(245,240,234,.7);
+    background-color: rgba(245, 240, 234, .5);
 }
 
 .operator {
-    background-color: rgba(235,177,115,255);
+    background-color: rgba(235, 177, 115, 255);
     color: #ffe2c6;
 }
 
 .operator:hover {
-    background-color: rgba(232,175,113,.7);
+    background-color: rgba(232, 175, 113, .6);
 }
 
 .clear {
-    background-color: rgba(221,99,42,255);
+    background-color: rgba(221, 99, 42, 255);
     color: #ffe2c6;
 }
 
 .clear:hover {
-    background-color: rgba(221,99,42,.7);
+    background-color: rgba(221, 99, 42, .6);
 }
 
 .backspace {
-    background-color: rgba(24,24,24,255);
+    background-color: rgba(24, 24, 24, 255);
     color: #e6e3e2;
 }
 
 .backspace:hover {
-background-color: rgba(24,24,24,.7);
+    background-color: rgba(24, 24, 24, .6);
 }
 
 .equals {
@@ -109,5 +119,5 @@ background-color: rgba(24,24,24,.7);
 }
 
 .equals:hover {
-    background-color: rgba(164,157,172,.7);
+    background-color: rgba(164, 157, 172, .7);
 }
