@@ -1,16 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200&display=swap');
 
-* {
-    font-family: 'Nunito Sans', sans-serif;
-    font-weight: bold;
-}
-
 .material-symbols-outlined {
     font-variation-settings:
         'FILL' 0,
         'wght' 300,
         'GRAD' 0,
-        'opsz' 16
+        'opsz' 24
+}
+
+* {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 900;
+    font-size: 16px;
 }
 
 html,
@@ -29,14 +30,84 @@ body {
     width: 60vw;
     max-height: 600px;
     height: 90vw;
+    padding: 40px 20px;
+    background-color: #e3dfdc;
+    border-radius: 12px;
 }
 
-.item {
-    flex: 1;
+.screen {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    height: 100%;
+    margin: 20px 0px;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+    background-color: #bfc0a1;
+    border-radius: 8px;
 }
 
 .row {
     display: flex;
     flex-direction: row;
     height: 100%;
+}
+
+button {
+    cursor: pointer;
+    margin: 5px;
+    border-radius: 8px;
+    border-style: none;
+    color: #9a5833;
+    background-color: rgba(245,240,234,255);
+}
+
+.btn {
+    flex: 1;
+}
+
+.item {
+    flex: 1;
+}
+
+.btn:hover {
+    background-color: rgba(245,240,234,.7);
+}
+
+.operator {
+    background-color: rgba(235,177,115,255);
+    color: #ffe2c6;
+}
+
+.operator:hover {
+    background-color: rgba(232,175,113,.7);
+}
+
+.clear {
+    background-color: rgba(221,99,42,255);
+    color: #ffe2c6;
+}
+
+.clear:hover {
+    background-color: rgba(221,99,42,.7);
+}
+
+.backspace {
+    background-color: rgba(24,24,24,255);
+    color: #e6e3e2;
+}
+
+.backspace:hover {
+background-color: rgba(24,24,24,.7);
+}
+
+.equals {
+    background-color: #a49dac;
+    color: #dbd6dd;
+}
+
+.equals:hover {
+    background-color: rgba(164,157,172,.7);
 }
