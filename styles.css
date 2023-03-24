@@ -21,6 +21,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: rgba(243, 205, 166, 255);
 }
 
 .calculator {
@@ -49,12 +50,12 @@ body {
     border-radius: 8px;
 }
 
-.screen-prev {
-    color: rgba(149, 147, 136, 255);
+.screen-previous {
+    color: rgba(158, 149, 164, 255);
     font-size: 20px;
 }
 
-.screen-curr {
+.screen-current {
     color: rgba(24, 24, 13, 255);
     font-size: 32px;
 }
