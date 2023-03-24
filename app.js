@@ -13,26 +13,22 @@ class Calculator {
     }
 
     backspace() {
-
+        this.currentOperand = this.currentOperand.toString().slice(0, -1);
     }
 
     appendNumber(number) {
         if (number === '.' && this.currentOperand.includes('.')) return;
-        this.currentOperand = this.currentOperand + number;
+        this.currentOperand = this.currentOperand.toString() + number.toString();
     }
 
     chooseOperation(operation) {
         if (this.currentOperand === '') return;
-        if (this.previousOperand != '') {
-            this.compute()
+        if (this.previousOperand !== '') {
+            this.compute();
         }
         this.operation = operation;
         this.previousOperand = this.currentOperand;
         this.currentOperand = '';
-    }
-
-    compute() {
-
     }
 
     updateDisplay() {
@@ -67,3 +63,12 @@ operationButtons.forEach(button => {
     })
 });
 
+clearButton.addEventListener('click', button => {
+    calculator.clear();
+    calculator.updateDisplay();
+})
+
+backspaceButton.addEventListener('click', button => {
+    calculator.backspace();
+    calculator.updateDisplay();
+})

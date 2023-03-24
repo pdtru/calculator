@@ -87,12 +87,12 @@ button {
     background-color: rgba(245, 240, 234, .5);
 }
 
-.operator {
+.operation {
     background-color: rgba(235, 177, 115, 255);
     color: #ffe2c6;
 }
 
-.operator:hover {
+.operation:hover {
     background-color: rgba(232, 175, 113, .6);
 }
 
@@ -121,4 +121,21 @@ button {
 
 .equals:hover {
     background-color: rgba(164, 157, 172, .7);
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: black;
+    text-decoration: none;
 }
