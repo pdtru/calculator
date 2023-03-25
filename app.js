@@ -31,13 +31,40 @@ class Calculator {
         this.currentOperand = '';
     }
 
+    compute() {
+        let computation;
+        const previous = parseFloat(this.previousOperand);
+        const current = parseFloat(this.currentOperand);
+        if (isNaN(previous) || isNaN(current)) return;
+
+        switch (this.operation) {
+            case '+':
+                computation = previous + current;
+                break;
+            case '-':
+                computation = previous - current;
+                break;
+            case '×':
+                computation = previous * current;
+                break;
+            case '÷':
+                computation = previous / current;
+                break;
+            default:
+                return
+        }
+
+        this.currentOperand = computation;
+        this.operation = undefined;
+        this.previousOperand = '';
+    }
+
     updateDisplay() {
         this.currentScreenText.innerText = this.currentOperand;
         this.previousScreenText.innerText = this.previousOperand;
     }
 
 }
-
 
 const numberButtons = document.querySelectorAll('[data-number]');
 const operationButtons = document.querySelectorAll('[data-operation');
@@ -61,6 +88,11 @@ operationButtons.forEach(button => {
         calculator.chooseOperation(button.innerText);
         calculator.updateDisplay();
     })
+});
+
+equalsButton.addEventListener('click', button => {
+    calculator.compute();
+    calculator.updateDisplay();
 });
 
 clearButton.addEventListener('click', button => {
