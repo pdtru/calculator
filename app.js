@@ -9,7 +9,6 @@ class Calculator {
         this.currentOperand = '';
         this.previousOperand = '';
         this.operation = undefined;
-
     }
 
     backspace() {
@@ -61,7 +60,12 @@ class Calculator {
 
     updateDisplay() {
         this.currentScreenText.innerText = this.currentOperand;
-        this.previousScreenText.innerText = this.previousOperand;
+        if (this.operation != null) {
+            this.previousScreenText.innerText = `${this.previousOperand} ${this.operation}`;
+        } else {
+            this.previousScreenText.innerText = '';
+        }
+
     }
 
 }
@@ -98,9 +102,11 @@ equalsButton.addEventListener('click', button => {
 clearButton.addEventListener('click', button => {
     calculator.clear();
     calculator.updateDisplay();
-})
+});
 
 backspaceButton.addEventListener('click', button => {
     calculator.backspace();
     calculator.updateDisplay();
-})
+});
+
+
