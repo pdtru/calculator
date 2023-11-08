@@ -1,5 +1,16 @@
-import { Text } from "react-native";
+import { View } from "react-native";
+import Calculator from "../components/Calculator";
+import Footer from "../components/Footer";
 
-export default function Page() {
-  return <Text>Hello, world!</Text>;
-}
+const App = () => {
+  return (
+    <View style={{ flex: 1, backgroundColor: "#edcfa8" }}>
+      <View style={{ flex: 1 }}>
+        <Calculator />
+      </View>
+      <Footer />
+    </View>
+  );
+};
+
+export default App;
